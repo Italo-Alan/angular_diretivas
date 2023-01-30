@@ -1,0 +1,22 @@
+<!--
+  Dessa forma estamos usando o class binding que é uma forma de property binding
+-->
+
+<!-- <h1>
+  <i class="bi bi-star"
+    [class.bi-star]="!myFav"
+    [class.bi-star-fill]="myFav"
+    (click)="switchFav()"></i>
+</h1> -->
+
+
+<!-- Usamos a diretiva ngClass quando temos muitas opções de classe -->
+<br>
+<h1>
+  <i class="bi bi-star"
+    [ngClass]="{
+      'bi-star': !myFav,
+      'bi-star-fill': myFav
+    }"
+    (click)="switchFav()"></i>
+</h1>

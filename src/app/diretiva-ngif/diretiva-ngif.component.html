@@ -1,0 +1,30 @@
+<h5>*ngif</h5>
+
+<div *ngIf="cursos.length > 0">
+  Lista de cursos aqui
+</div>
+<div *ngIf="cursos.length === 0">
+  Não existem cursos para ser listado, no momento.
+</div>
+
+<div *ngIf="mostrarCursos">
+  Lista de cursos aqui
+</div>
+<div *ngIf="!mostrarCursos">
+  Não existem cursos para ser listado, no momento.
+</div>
+
+<br>
+
+<button (click)="onMostrarCursos()">Mostart/Esconder cursos</button>
+
+<!-- O uso do hidden acaba sendo mais interessante, por ser menos custoso. -->
+<h5>Hidden como alternativa ao uso do *ngif</h5>
+<div [hidden]="!mostrarCursos">
+  Lista de cursos aqui
+</div>
+<div [hidden]="mostrarCursos">
+  Não existem cursos para ser listado, no momento.
+</div>
+
+<!-- Recomenda-se que o [hidden] seja usado quando a árvore de elementos é pequena, lembrando que o hidden é menos custoso, e o *ngif com árvores grandes. -->

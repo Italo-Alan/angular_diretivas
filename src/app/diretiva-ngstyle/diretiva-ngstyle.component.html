@@ -1,0 +1,30 @@
+<!-- Usando property bind de stilos -->
+<h5>Styles com property binding (style binding)</h5>
+<button
+  [style.backgroundColor]="ativo ? 'blue' : 'gray'"
+  [style.color]="ativo ? 'white' : 'black'"
+  [style.fontWeight]="ativo ? 'bold' : 'normal'"
+  [style.fontSize]="tamanhoFonte + 'px'"
+  (click)="changeStatus()">Mudando atributo 'ativo'
+</button>
+
+<br>
+
+<!-- Aqui temos um two-way-data-biding que muda o valor da fonte que atualiza o tamanho da fonte-->
+<input type="text" [(ngModel)]="tamanhoFonte">
+
+<!-- Usando ngStyle, que aplica stilo a tags HTML -->
+
+<br><br>
+<h5>Styles com property binding (style binding)</h5>
+<button
+  [ngStyle]="{
+    'backgroundColor': ativo ? 'blue' : 'gray',
+    'color': ativo ? 'white' : 'black',
+    'fontWeight': ativo ? 'bold' : 'normal',
+    'fontSize': tamanhoFonte + 'px'
+  }"
+  (click)="changeStatus()">Mudando atributo 'ativo'
+</button>
+<br>
+<input type="text" [(ngModel)]="tamanhoFonte">
