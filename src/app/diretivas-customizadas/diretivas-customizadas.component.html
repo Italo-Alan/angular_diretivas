@@ -1,0 +1,44 @@
+<!-- Via property binding do style -->
+<p style="background-color: red">
+  Texto com fundo amarelo
+</p>
+
+<!-- Via property binding do style -->
+<button style="background-color: red">
+  Texto com fundo amarelo
+</button>
+
+<!-- Via diretiva -->
+<p appFundoAmarelo>
+  Texto com fundo amarelo
+</p>
+
+<button appFundoAmarelo>
+  Texto com fundo amarelo
+</button>
+
+<br><br>
+
+<p appHightlightMouse>
+  Texto com hightlight quando passo o mouse.
+</p>
+
+<p appHightlight [defaultColor]="'grey'" [highlightColor]="'red'">
+  Texto com hightlight quando passo o mouse.
+</p>
+<br><br>
+
+
+<div *ngIf="mostrarCursos">
+  Lista de cursos aqui
+</div>
+
+<div *ngElse="mostrarCursos">
+  Não existem cursos para ser listado, no momento.
+</div>
+
+<br>
+
+<button (click)="onMostrarCursos()">
+  Mostart/Esconder cursos
+</button>

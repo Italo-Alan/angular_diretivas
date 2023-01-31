@@ -1,0 +1,6 @@
+<!-- <p>Descrição: {{ task.description }}</p> -->
+<!-- <p>Responsável: {{ task.responsible !== null ? task.responsible.name : ""}}</p> -->
+
+<!-- Como forma de evitar deixar o código verboso e extenso temos o uso do operado Elvis -->
+<!-- É colocado após o objeto que pode ter o seu valor como null -->
+<p>Responsável: {{ task.responsible?.user}}</p>
